@@ -151,7 +151,7 @@ img {
 
 .top-bar {
   left: 0;
-  padding: 0 2.4rem;
+  padding: 0 .8rem;
   position: fixed;
   top: 0;
   width: 100vw;
@@ -193,15 +193,9 @@ img {
 
 .search-bar {
   color: rgba(0, 0, 0, .6);
-  display: inline-block;
-  height: 37px;
-  overflow: hidden;
-  padding: 5px;
   height: 45px;
   overflow: hidden;
   padding: 5px;
-  position: relative;
-  top: 7px;
 }
 
 .search-bar>svg {
@@ -219,6 +213,55 @@ img {
 
 .logo {
   display: inline-block;
+}
+
+.card {
+  border-radius: 0.8rem;
+  background-color: #ffffff;
+}
+
+.profile-header {
+  height: 56.250px;
+  background-image: url('https://static.licdn.com/sc/h/55k1z8997gh8dwtihm11aajyq');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.border-left-1 {
+  border-left: 1px solid #ccc;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+.nav-link-sm {
+  padding-left: 0.85rem;
+  padding-right: 0.85rem;
+}
+
+.mtx {
+  margin-top: 2px !important;
+}
+
+.nav-overflow {
   position: relative;
-  top: -10px;
+  height: 0;
+  width: 0;
+}
+
+.nav-overflow-items {
+  background-color: #fff;
+  width: 130px;
+  height: 55px;
+  position: absolute;
+  left: -86px;
+  bottom: -65px;
+  border: 1px solid #e2e0e0;
+  box-shadow: 0px 3px 4px -2px #e1e1e1;
+  border-radius: 0 0 10px 0;
+  padding: 5px;
 }

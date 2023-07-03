@@ -1,15 +1,15 @@
 import NavBar from "./NavBar";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import user from "../../data/user";
-import { useEffect } from "react";
 
 const LinkedInLayout = ({ children }) => {
-  const [isMobile, setIsMobile] = useState(false);
+  const [pageWidth, setPageWidth] = useState(1200)
   const [page, setPage] = useState("Home");
   const newPost = true;
 
   const handleWindowSizeChange = () => {
-    setIsMobile(window.innerWidth <= 769);
+    const width = window.innerWidth;
+    setPageWidth(width);
   };
 
   useEffect(() => {
@@ -22,20 +22,21 @@ const LinkedInLayout = ({ children }) => {
 
   return (
     <>
-    
       <div className="container" style={{ paddingBottom: "2rem" }}>
         <div className="top-bar bg-wh">
-          <div>
+          <div className="container">
             <NavBar
               page={page}
               setPage={setPage}
               profileImg={user.profileImg}
               userName={user.name}
               newPost={newPost}
-              isMobile={isMobile}
+              pageWidth={pageWidth}
             />
           </div>
         </div>
+
+        <div style={{ marginTop: "3rem" }}></div>
         <main>{children}</main>
       </div>
     </>
