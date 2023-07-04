@@ -1,14 +1,13 @@
 import NavBar from "./NavBar";
 import { useState, useEffect } from "react";
-import user from "../../data/user";
 import pageSizes from '../../data/page-sizes'
 
-const LinkedInLayout = ({ children }) => {
+const LinkedInLayout = ({ children, user }) => {
   const [pageWidth, setPageWidth] = useState(580);
   const [page, setPage] = useState("Home");
   const newPost = true;
   const newRequests = 2;
-  const newNotifications = 111
+  const newNotifications = 12
 
   const handleWindowSizeChange = () => {
     const width = window.innerWidth;
@@ -47,11 +46,15 @@ const LinkedInLayout = ({ children }) => {
         </div>
 
         <div 
-          className={`${pageWidth <= pageSizes.second ? "mobile-viewport" : ""}`}
-          style={{ position: "relative", top: "3.5rem", padding: "0 0.8rem" }}>
+          className={
+            `${pageWidth <= pageSizes.second ? "mobile-viewport " : " "}
+            ${pageWidth <= pageSizes.sixth ? "md-viewport" : ""}`
+          }
+          style={{ position: "relative", top: "4.5rem", padding: "0 0.8rem" }}>
           <div className="container">{children}</div>
         </div>
       </div>
+      <br /><br /><br />
     </>
   );
 };

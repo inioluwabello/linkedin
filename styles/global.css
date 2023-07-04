@@ -215,20 +215,8 @@ img {
   display: inline-block;
 }
 
-.card {
-  border-radius: 0.8rem;
-  background-color: #ffffff;
-}
-
 .border-left-1 {
   border-left: 1px solid #ccc;
-}
-
-@media (max-width: 1200px) {
-  .container {
-    max-width: 100%;
-    padding: 0;
-  }
 }
 
 .nav-link-sm {
@@ -259,16 +247,12 @@ img {
   padding: 5px;
 }
 
-.mobile-viewport {
-  padding: 0 !important;
-}
-
 .profile-header {
   height: 56.250px;
   background-image: url('https://static.licdn.com/sc/h/55k1z8997gh8dwtihm11aajyq');
   background-repeat: no-repeat;
   background-size: cover;
-  border-radius: 14px 14px 0 0;
+  border-radius: .6rem .6rem 0 0;
 }
 
 .notification-badge {
@@ -284,11 +268,99 @@ img {
 
 .insert.notification-badge {
   background: #cc1016;
-    color: #fff !important;
-    border: 0px;
-    line-height: 13px;
-    font-size: 10px;
-    width: auto;
-    padding: 2px;
-    min-width: 16px;
+  color: #fff !important;
+  border: 0px;
+  line-height: 13px;
+  font-size: 10px;
+  width: auto;
+  padding: 2px;
+  min-width: 16px;
+}
+
+.mobile-viewport {
+  padding: 0 !important;
+}
+
+.md-viewport {
+  top: 3.5rem !important
+}
+
+@media (max-width: 1200px) {
+  .container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+
+.card {
+  border-radius: 0.6rem;
+  background-color: #ffffff;
+}
+
+.identity>img {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  border: 2px solid #fff;
+  margin: 0px auto;
+  position: relative;
+  top: -36px;
+}
+
+.profile-name {
+  margin-top: -.5rem;
+  font-weight: 500;
+  font-size: .9rem;
+}
+
+.profile-title {
+  font-size: .6rem;
+  color: rgba(0, 0, 0, .6);
+}
+
+.profile-views {
+  padding: 0.8rem 0;
+  margin-top: 0.8rem;
+  border-top: 1px solid rgba(0, 0, 0, .08);
+  width: 100%;
+  font-size: .7rem;
+  color: rgba(0, 0, 0, .6);
+  font-weight: 500;
+}
+
+.profile-views>.profile-view-item {
+  padding: 0 0.8rem;
+}
+.hover-bg:hover {
+  background-color: rgba(0, 0, 0, .08);
+  cursor: pointer;
+}
+
+.access-tools {
+  font-size: .6rem;
+  color: rgba(0, 0, 0, .6);
+  border-top: 1px solid rgba(0, 0, 0, .08);
+  padding: 0.8rem 0.8rem 0;
+}
+
+.premium-ad {
+  padding: 0 0.8rem 0.8rem;
+  line-height: 17px;
+}
+
+.premium-ad>a {
+  font-size: .6rem;
+  color: rgba(0, 0, 0, .6) !important;
+  font-weight: 500;
+  text-decoration: underline;
+}
+
+.profile-items {
+  padding: .8rem;
+  display: block;
+  border-radius: 0 0 0.6rem 0.6rem;
+  font-size: .65rem;
+  font-weight: 500;
+  color: rgba(0, 0, 0, .6);
+  border-top: 1px solid rgba(0, 0, 0, .08);
 }
