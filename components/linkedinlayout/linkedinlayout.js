@@ -4,7 +4,7 @@ import user from "../../data/user";
 import pageSizes from '../../data/page-sizes'
 
 const LinkedInLayout = ({ children }) => {
-  const [pageWidth, setPageWidth] = useState(1200);
+  const [pageWidth, setPageWidth] = useState(580);
   const [page, setPage] = useState("Home");
   const newPost = true;
   const newRequests = 2;
@@ -14,6 +14,10 @@ const LinkedInLayout = ({ children }) => {
     const width = window.innerWidth;
     setPageWidth(width);
   };
+
+  setTimeout(() => {
+    handleWindowSizeChange();
+  }, 1000);
 
   useEffect(() => {
     window.addEventListener("resize", handleWindowSizeChange);
