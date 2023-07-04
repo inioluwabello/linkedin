@@ -6,7 +6,7 @@ import { faBookmark } from "@fortawesome/free-solid-svg-icons";
 
 const MiniProfileCard = ({ user }) => {
   return (
-    <div className="card">
+    <div className="card mt-3">
       <div className="profile-header"></div>
 
       <div className="identity">

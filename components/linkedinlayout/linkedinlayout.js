@@ -50,7 +50,7 @@ const LinkedInLayout = ({ children, user }) => {
             `${pageWidth <= pageSizes.second ? "mobile-viewport " : " "}
             ${pageWidth <= pageSizes.sixth ? "md-viewport" : ""}`
           }
-          style={{ position: "relative", top: "4.5rem", padding: "0 0.8rem" }}>
+          style={{ position: "relative", top: "3.5rem", padding: "0 0.8rem" }}>
           <div className="container">{children}</div>
         </div>
       </div>
