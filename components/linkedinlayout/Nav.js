@@ -1,6 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCaretDown } from "@fortawesome/free-solid-svg-icons";
-import pageSizes from "../../data/page-sizes";
 import AdvertiseLink from "./nav-links/AdvertiseLink";
 import BusinessLink from "./nav-links/BusinessLink";
 import { useState } from "react";
@@ -14,6 +13,7 @@ const Nav = ({
   newMessages,
   newNotifications,
   pageWidth,
+  pageSizes,
 }) => {
   const [navOverflowShowing, setNavOverflowShowing] = useState(false);
 
@@ -29,6 +29,11 @@ const Nav = ({
             onClick={() => handlePageClick("Home")}
             className={`nav-link ${page === "Home" ? "nav-link-active" : ""}`}
           >
+            {newPost === true && (
+              <div style={{ position: "relative", height: 0 }}>
+                <span className="notification-badge"></span>
+              </div>
+            )}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -44,7 +49,6 @@ const Nav = ({
             {!(pageWidth <= pageSizes.sixth) && (
               <span className="link-name">Home</span>
             )}
-            {newPost === true && <span className="notification-badge"></span>}
           </a>
           {!(pageWidth <= pageSizes.sixth) && page === "Home" && (
             <div style={{ position: "relative" }}>
@@ -59,6 +63,13 @@ const Nav = ({
               page === "Network" ? "nav-link-active " : " "
             } ${pageWidth <= pageSizes.fourth ? "nav-link-sm" : ""}`}
           >
+            {newRequests > 0 && (
+              <div style={{ position: "relative", height: 0 }}>
+                <span className="insert notification-badge">
+                  {newRequests}
+                </span>
+              </div>
+            )}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -73,9 +84,6 @@ const Nav = ({
             </svg>
             {pageWidth > pageSizes.sixth && (
               <span className="link-name">My Network</span>
-            )}
-            {newRequests > 0 && (
-              <span className="network notification-badge">{newRequests}</span>
             )}
           </a>
           {!(pageWidth <= pageSizes.sixth) && page === "Network" && (
@@ -120,6 +128,14 @@ const Nav = ({
               page === "Messaging" ? "nav-link-active" : ""
             } ${pageWidth <= pageSizes.fourth ? "nav-link-sm" : ""}`}
           >
+            
+            {newMessages > 0 && (
+              <div style={{ position: "relative", height: 0 }}>
+                <span className="insert notification-badge">
+                  {newMessages}
+                </span>
+              </div>
+            )}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -135,11 +151,6 @@ const Nav = ({
             {pageWidth > pageSizes.sixth && (
               <span className="link-name">Messaging</span>
             )}
-            {newMessages > 0 && (
-              <span className="messaging notification-badge">
-                {newMessages}
-              </span>
-            )}
           </a>
           {!(pageWidth <= pageSizes.sixth) && page === "Messaging" && (
             <div style={{ position: "relative" }}>
@@ -154,6 +165,13 @@ const Nav = ({
               page === "Notifications" ? "nav-link-active" : ""
             } ${pageWidth <= pageSizes.fourth ? "nav-link-sm" : ""}`}
           >
+          {newNotifications > 0 && (
+            <div style={{ position: "relative", height: 0 }}>
+              <span className="insert notification-badge">
+                {newNotifications}
+              </span>
+            </div>
+          )}
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -168,11 +186,6 @@ const Nav = ({
             </svg>
             {pageWidth > pageSizes.sixth && (
               <span className="link-name">Notifications</span>
-            )}
-            {newNotifications > 0 && (
-              <span className="notification notification-badge">
-                {newNotifications}
-              </span>
             )}
           </a>
           {!(pageWidth <= pageSizes.sixth) && page === "Notifications" && (
@@ -217,7 +230,11 @@ const Nav = ({
                 <path d="M14 12a2 2 0 11-2-2 2 2 0 012 2zM4 10a2 2 0 102 2 2 2 0 00-2-2zm16 0a2 2 0 102 2 2 2 0 00-2-2z"></path>
               </svg>
             </a>
-            <div className={`nav-overflow ${navOverflowShowing ? "d-block" : "d-none"}`}>
+            <div
+              className={`nav-overflow ${
+                navOverflowShowing ? "d-block" : "d-none"
+              }`}
+            >
               <div className="nav-overflow-items">
                 <ul className="nav">
                   <li>

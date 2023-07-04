@@ -220,13 +220,6 @@ img {
   background-color: #ffffff;
 }
 
-.profile-header {
-  height: 56.250px;
-  background-image: url('https://static.licdn.com/sc/h/55k1z8997gh8dwtihm11aajyq');
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
 .border-left-1 {
   border-left: 1px solid #ccc;
 }
@@ -264,4 +257,38 @@ img {
   box-shadow: 0px 3px 4px -2px #e1e1e1;
   border-radius: 0 0 10px 0;
   padding: 5px;
+}
+
+.mobile-viewport {
+  padding: 0 !important;
+}
+
+.profile-header {
+  height: 56.250px;
+  background-image: url('https://static.licdn.com/sc/h/55k1z8997gh8dwtihm11aajyq');
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 14px 14px 0 0;
+}
+
+.notification-badge {
+  display: inline-block;
+  position: relative;
+  width: 16px;
+  height: 16px;
+  border: 5.5px solid #cc1016;
+  border-radius: 10px;
+  top: -4px;
+  left: 11px;
+}
+
+.insert.notification-badge {
+  background: #cc1016;
+    color: #fff !important;
+    border: 0px;
+    line-height: 13px;
+    font-size: 10px;
+    width: auto;
+    padding: 2px;
+    min-width: 16px;
 }

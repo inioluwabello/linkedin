@@ -1,7 +1,6 @@
 import Logo from "./Logo";
 import SearchBar from "./SearchBar";
 import Nav from "./Nav";
-import pageSizes from "../../data/page-sizes";
 
 const NavBar = ({
   page,
@@ -9,7 +8,10 @@ const NavBar = ({
   profileImg,
   userName,
   newPost,
-  pageWidth
+  pageWidth,
+  pageSizes,
+  newRequests,
+  newNotifications
 }) => {
   return (
     <>
@@ -62,6 +64,9 @@ const NavBar = ({
           userName={userName}
           newPost={newPost}
           pageWidth={pageWidth}
+          pageSizes={pageSizes}
+          newRequests={newRequests}
+          newNotifications={newNotifications}
         />
       </div>
     </>
