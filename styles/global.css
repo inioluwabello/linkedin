@@ -559,3 +559,6 @@ img {
   position: relative;
   top: .1rem;
 }
+.post-liked {
+  color: #378fe9;
+}

@@ -103,7 +103,8 @@ export async function getStaticProps() {
                 id: 1
               }]
             }]
-          }]
+          }],
+          likedByUser: true
         },
         {
           id:2,

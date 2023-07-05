@@ -8,7 +8,7 @@ const PostList = ({ post, user }) => {
       <div className="card-content">
         {post.referrer && <PostReferrer post={post} />}
         <PostContent post={post} />
-        <PostActions user={user} />
+        <PostActions user={user} post={post} />
       </div>
     </div>
   );

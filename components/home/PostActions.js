@@ -13,7 +13,7 @@ const PostActions = ({ user, post }) => {
           />{" "}
           <FontAwesomeIcon icon={faCaretDown} width={12} height={12} />
         </button>
-        <button className="hover-bg alt-text bold">
+        <button className={`hover-bg alt-text bold ${post.likedByUser ? "post-liked" : ""}`}>
           <FontAwesomeIcon icon={faThumbsUp} width={16} height={16} />{" "}
           <span>Like</span>
         </button>
