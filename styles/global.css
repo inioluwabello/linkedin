@@ -622,3 +622,41 @@ img {
   line-height: 20px;
   background-color: transparent;
 }
+
+.post-comment-list>button {
+  border: none;
+  background-color: transparent;
+}
+
+button.order>svg {
+  position: relative;
+  top: -1.5px;
+}
+
+.comment-profile-details>img {
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: .5rem;
+}
+
+.comment-identity {
+  background-color: #f2f2f2;
+  padding: .5rem;
+  border-radius: 0 8px 8px 8px;
+}
+
+.comment-actions>span {
+  cursor: pointer;
+  display: inline-block;
+  padding: 0px 3px;
+  border-radius: 4px;
+}
+.author-tag{
+  display: inline-block;
+  padding: 0px 3px;
+  border-radius: 4px;
+  background-color: #56687a;
+  color: #fff;
+  margin-left: 0.5rem;
+}

@@ -71,12 +71,14 @@ export async function getStaticProps() {
           comments: [{
             id: "comment-1",
             name: "Adeyemo Temitope",
-            img: "/images/posts/adeyemo.jpg",
+            profileImg: "/images/posts/adeyemo.jpg",
             title: "Sales Manager at Crowd square",
             content: "Congratulations Emmanuel, so happy for you and many more to come",
             time: "5h",
             replies: [{
+              id: "reply-1",
               name: "Emeka Nduka",
+              profileImg: "/images/posts/nduka.jpg",
               title: "Co-Founder Scholarly| Here to inspire not impress| Entrepreneur| Elumelu boy| Gen Z Speaker| Brand Influencer",
               content: "Thank you so much.",
               time: "4h",
@@ -89,12 +91,14 @@ export async function getStaticProps() {
           {
             id: "comment-2",
             name: "Ini-Obong A.",
-            img: "/images/posts/adeyemo.jpg",
+            profileImg: "/images/posts/ini.jpg",
             title: "Social Impact Advocate| Corporate Social Responsibility| Social Entreprenuer| MSc. Sustainability & Social Innovation HEC PARIS | 2020/21 TOTAL Energies Scholar",
             content: "Amazing, welldone Bro 👏",
             time: "5h",
             replies: [{
+              id: "reply-2",
               name: "Emeka Nduka",
+              profileImg: "/images/posts/nduka.jpg",
               title: "Co-Founder Scholarly| Here to inspire not impress| Entrepreneur| Elumelu boy| Gen Z Speaker| Brand Influencer",
               content: "Thank you so much. 🤍🤍",
               time: "4h",
