@@ -20,7 +20,7 @@ const Index = ({ posts }) => {
           </div>
           <div className="col-xs-12 col-sm-7 col-md-8 col-lg-6">
             <StartPost user={user} />
-            <Posts posts={posts} />
+            <Posts posts={posts} user={user} />
           </div>
           <div className="col-xs-12 d-sm-none d-md-none d-lg-block col-lg-3"></div>
         </div>
@@ -62,7 +62,48 @@ export async function getStaticProps() {
           postImage: "/images/posts/nduka-post.jpg",
           date: '1w',
           edited: true,
-          showGlobe: true
+          showGlobe: true,
+          reactions: {
+            like: 23,
+            celebrate: 12,
+            love: 34
+          },
+          comments: [{
+            id: "comment-1",
+            name: "Adeyemo Temitope",
+            img: "/images/posts/adeyemo.jpg",
+            title: "Sales Manager at Crowd square",
+            content: "Congratulations Emmanuel, so happy for you and many more to come",
+            time: "5h",
+            replies: [{
+              name: "Emeka Nduka",
+              title: "Co-Founder Scholarly| Here to inspire not impress| Entrepreneur| Elumelu boy| Gen Z Speaker| Brand Influencer",
+              content: "Thank you so much.",
+              time: "4h",
+              isAuthor: true,
+              celebrates: [{
+                id: 1
+              }]
+            }]
+          },
+          {
+            id: "comment-2",
+            name: "Ini-Obong A.",
+            img: "/images/posts/adeyemo.jpg",
+            title: "Social Impact Advocate| Corporate Social Responsibility| Social Entreprenuer| MSc. Sustainability & Social Innovation HEC PARIS | 2020/21 TOTAL Energies Scholar",
+            content: "Amazing, welldone Bro 👏",
+            time: "5h",
+            replies: [{
+              name: "Emeka Nduka",
+              title: "Co-Founder Scholarly| Here to inspire not impress| Entrepreneur| Elumelu boy| Gen Z Speaker| Brand Influencer",
+              content: "Thank you so much. 🤍🤍",
+              time: "4h",
+              isAuthor: true,
+              likes: [{
+                id: 1
+              }]
+            }]
+          }]
         },
         {
           id:2,
@@ -114,7 +155,13 @@ export async function getStaticProps() {
           postImage: "/images/posts/vee1.jpg",
           date: '1h',
           edited: false,
-          showGlobe: false
+          showGlobe: false,
+          reactions: {
+            like: 2,
+            celebrate: 3,
+            love: 16
+          },
+          comments: []
         },
       ],
     },

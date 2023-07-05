@@ -527,6 +527,9 @@ img {
 .text-md {
   font-size: .7rem;
 }
+.text-sm {
+  font-size: .6rem;
+}
 .alt-text-1{
   color: rgba(0, 0, 0, .9);
 }
@@ -535,4 +538,24 @@ img {
 }
 .post-image {
   margin: 0 -0.8rem;
+}
+.reactions > svg {
+  margin-left: -0.3rem;
+}.reactions > span {
+  margin-left: 0.5rem;
+  position:relative;
+  top: .05rem;
+}
+.post-actions {
+  padding-top: .4rem;
+}
+.post-actions > button{
+  border: 0;
+  background: 0;
+  padding: 0.6rem 0.8rem;
+  border-radius: 4px;
+}
+.post-actions > button > span {
+  position: relative;
+  top: .1rem;
 }
