@@ -16,11 +16,11 @@ const PostSort = ({orderBy, setOrderBy}) => {
 
   return (
     <>
-      <div className="fl">
+      <div className="fl" style={{height: "29px"}}>
         <div style={{ flexGrow: "1" }}>
           <hr />
         </div>
-        <div class="post-sort">
+        <div className="post-sort">
           <span className="alt-text">Sort by:{" "}</span>
           <button onClick={() => handleOrderOptionsClick(!showingOrderOptions)}>
             {orderBy} &nbsp;&nbsp;
