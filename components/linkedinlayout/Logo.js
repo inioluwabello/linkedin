@@ -1,5 +1,3 @@
-import Image from "next/Image";
-
 const Logo = () => {
   return (
     <svg
@@ -8,7 +6,6 @@ const Logo = () => {
       viewBox="0 0 24 24"
       data-supported-dps="24x24"
       fill="currentColor"
-      className="mercado-match"
       width="41"
       height="41"
       focusable="false"
