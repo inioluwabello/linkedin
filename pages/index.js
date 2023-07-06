@@ -4,9 +4,10 @@ import MiniProfileCard from "../components/home/MiniProfileCard";
 import StartPost from "../components/home/StartPost";
 import MyPages from "../components/home/MyPages";
 import Posts from "../components/home/Posts";
-import Suggestions from "../components/home/Suggestions"
-
+import Suggestions from "../components/home/Suggestions";
+import PremiumAd from "../components/home/PremiumAd";
 import user from "../data/user";
+import Disclaimer from "../components/utils/Disclaimer";
 
 const Index = ({ posts }) => {
 
@@ -25,8 +26,11 @@ const Index = ({ posts }) => {
           </div>
           <div className="col-xs-12 d-sm-none d-md-none d-lg-block col-lg-3">
             <Suggestions />
+            <PremiumAd user={user} />
           </div>
         </div>
+        
+        <Disclaimer />
       </LinkedInLayout>
     </>
   );
@@ -39,14 +43,14 @@ export async function getStaticProps() {
     props: {
       posts: [
         {
-          id:1,
+          id: 1,
           owner: {
             img: "/images/posts/nduka.jpg",
             name: "Immanuel Nduka",
             following: true,
             title:
               "Co-Founder Scholarly| Here to inspire not impress| Entrepreneur| Gen Z Speaker| Brand Influencer",
-            connectionOrder: "1st"
+            connectionOrder: "1st",
           },
           postContent: `I officially started my new job and role as the Co-founder and COO at Scholarly.
 
@@ -63,70 +67,84 @@ export async function getStaticProps() {
         Join our waitlist at scholarlyme.com
          and share this post. If we must win, we do it together, and in doing it together, we win as one. Cheers.`,
           postImage: "/images/posts/nduka-post.jpg",
-          date: '1w',
+          date: "1w",
           edited: true,
           showGlobe: true,
           reactions: {
             like: 23,
             celebrate: 12,
-            love: 34
+            love: 34,
           },
-          comments: [{
-            id: "comment-1",
-            name: "Fadeyemo Temitope",
-            profileImg: "/images/posts/adeyemo.jpg",
-            title: "Sales Manager at Crowd square",
-            content: "Congratulations Emmanuel, so happy for you and many more to come",
-            time: "5h",
-            replies: [{
-              id: "reply-1",
-              name: "Immanuel Nduka",
-              profileImg: "/images/posts/nduka.jpg",
-              title: "Co-Founder Scholarly| Here to inspire not impress| Entrepreneur| Elumelu boy| Gen Z Speaker| Brand Influencer",
-              content: "Thank you so much.",
-              time: "4h",
-              isAuthor: true,
-              celebrates: [{
-                id: 1
-              }]
-            }]
-          },
-          {
-            id: "comment-2",
-            name: "Ini-Obon B.",
-            profileImg: "/images/posts/ini.jpg",
-            title: "Social Impact Advocate| Corporate Social Responsibility| Social Entreprenuer| MSc. Sustainability & Social Innovation HEC PARIS | 2020/21 TOTAL Energies Scholar",
-            content: "Amazing, welldone Bro 👏",
-            time: "5h",
-            replies: [{
-              id: "reply-2",
-              name: "Immanuel Nduka",
-              profileImg: "/images/posts/nduka.jpg",
-              title: "Co-Founder Scholarly| Here to inspire not impress| Entrepreneur| Elumelu boy| Gen Z Speaker| Brand Influencer",
-              content: "Thank you so much. 🤍🤍",
-              time: "4h",
-              isAuthor: true,
-              likes: [{
-                id: 1
-              }]
-            }]
-          }],
-          likedByUser: true
+          comments: [
+            {
+              id: "comment-1",
+              name: "Fadeyemo Temitope",
+              profileImg: "/images/posts/adeyemo.jpg",
+              title: "Sales Manager at Crowd square",
+              content:
+                "Congratulations Emmanuel, so happy for you and many more to come",
+              time: "5h",
+              replies: [
+                {
+                  id: "reply-1",
+                  name: "Immanuel Nduka",
+                  profileImg: "/images/posts/nduka.jpg",
+                  title:
+                    "Co-Founder Scholarly| Here to inspire not impress| Entrepreneur| Elumelu boy| Gen Z Speaker| Brand Influencer",
+                  content: "Thank you so much.",
+                  time: "4h",
+                  isAuthor: true,
+                  celebrates: [
+                    {
+                      id: 1,
+                    },
+                  ],
+                },
+              ],
+            },
+            {
+              id: "comment-2",
+              name: "Ini-Obon B.",
+              profileImg: "/images/posts/ini.jpg",
+              title:
+                "Social Impact Advocate| Corporate Social Responsibility| Social Entreprenuer| MSc. Sustainability & Social Innovation HEC PARIS | 2020/21 TOTAL Energies Scholar",
+              content: "Amazing, welldone Bro 👏",
+              time: "5h",
+              replies: [
+                {
+                  id: "reply-2",
+                  name: "Immanuel Nduka",
+                  profileImg: "/images/posts/nduka.jpg",
+                  title:
+                    "Co-Founder Scholarly| Here to inspire not impress| Entrepreneur| Elumelu boy| Gen Z Speaker| Brand Influencer",
+                  content: "Thank you so much. 🤍🤍",
+                  time: "4h",
+                  isAuthor: true,
+                  likes: [
+                    {
+                      id: 1,
+                    },
+                  ],
+                },
+              ],
+            },
+          ],
+          likedByUser: true,
         },
         {
-          id:2,
+          id: 2,
           owner: {
             img: "/images/posts/vee.jpg",
             name: "Bee Mativhu, ed.m",
             following: false,
             title:
               "Young Leader at the UN | Girls'Education Activist | Harvard MA | Founder of Empowered By Vee | Oxford BA Grad",
-            connectionOrder: "1st"
+            connectionOrder: "1st",
           },
           referrer: {
             img: "/images/posts/ruth.jpg",
             name: "Ruth Bazinga",
-            desc: "likes this"
+            desc: "likes this",
           },
           postContent: `Allow me to re-introduce myself, 👩🏾‍🦱 hi! my name is Varaidzo Felistus Kativhu - but everyone calls me Vee
 
@@ -161,15 +179,15 @@ export async function getStaticProps() {
           
           🍕 ohhh and I LOVEEEEE pizza & travelling the world 🌍!!`,
           postImage: "/images/posts/vee1.jpg",
-          date: '1h',
+          date: "1h",
           edited: false,
           showGlobe: false,
           reactions: {
             like: 2,
             celebrate: 3,
-            love: 16
+            love: 16,
           },
-          comments: []
+          comments: [],
         },
       ],
     },

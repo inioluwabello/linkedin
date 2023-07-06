@@ -677,3 +677,12 @@ button.order>svg {
 .follow-btn:hover {
   border: 2px solid rgba(0, 0, 0, .8);
 }
+.reactivate-btn {
+  border: 1px solid #0a66c2;
+  border-radius: 50px;
+  padding: .3rem .6rem;
+  background-color: transparent;
+}
+.emphasis {
+  color: brown;
+}
