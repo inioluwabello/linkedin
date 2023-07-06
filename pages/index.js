@@ -4,6 +4,7 @@ import MiniProfileCard from "../components/home/MiniProfileCard";
 import StartPost from "../components/home/StartPost";
 import MyPages from "../components/home/MyPages";
 import Posts from "../components/home/Posts";
+import Suggestions from "../components/home/Suggestions"
 
 import user from "../data/user";
 
@@ -22,7 +23,9 @@ const Index = ({ posts }) => {
             <StartPost user={user} />
             <Posts posts={posts} user={user} />
           </div>
-          <div className="col-xs-12 d-sm-none d-md-none d-lg-block col-lg-3"></div>
+          <div className="col-xs-12 d-sm-none d-md-none d-lg-block col-lg-3">
+            <Suggestions />
+          </div>
         </div>
       </LinkedInLayout>
     </>
@@ -39,10 +42,10 @@ export async function getStaticProps() {
           id:1,
           owner: {
             img: "/images/posts/nduka.jpg",
-            name: "Emmanuel Nduka",
+            name: "Immanuel Nduka",
             following: true,
             title:
-              "Co-Founder Scholarly| Here to inspire not impress| Entrepreneur| Elumelu boy| Gen Z Speaker| Brand Influencer",
+              "Co-Founder Scholarly| Here to inspire not impress| Entrepreneur| Gen Z Speaker| Brand Influencer",
             connectionOrder: "1st"
           },
           postContent: `I officially started my new job and role as the Co-founder and COO at Scholarly.
@@ -70,14 +73,14 @@ export async function getStaticProps() {
           },
           comments: [{
             id: "comment-1",
-            name: "Adeyemo Temitope",
+            name: "Fadeyemo Temitope",
             profileImg: "/images/posts/adeyemo.jpg",
             title: "Sales Manager at Crowd square",
             content: "Congratulations Emmanuel, so happy for you and many more to come",
             time: "5h",
             replies: [{
               id: "reply-1",
-              name: "Emeka Nduka",
+              name: "Immanuel Nduka",
               profileImg: "/images/posts/nduka.jpg",
               title: "Co-Founder Scholarly| Here to inspire not impress| Entrepreneur| Elumelu boy| Gen Z Speaker| Brand Influencer",
               content: "Thank you so much.",
@@ -90,14 +93,14 @@ export async function getStaticProps() {
           },
           {
             id: "comment-2",
-            name: "Ini-Obong A.",
+            name: "Ini-Obon B.",
             profileImg: "/images/posts/ini.jpg",
             title: "Social Impact Advocate| Corporate Social Responsibility| Social Entreprenuer| MSc. Sustainability & Social Innovation HEC PARIS | 2020/21 TOTAL Energies Scholar",
             content: "Amazing, welldone Bro 👏",
             time: "5h",
             replies: [{
               id: "reply-2",
-              name: "Emeka Nduka",
+              name: "Immanuel Nduka",
               profileImg: "/images/posts/nduka.jpg",
               title: "Co-Founder Scholarly| Here to inspire not impress| Entrepreneur| Elumelu boy| Gen Z Speaker| Brand Influencer",
               content: "Thank you so much. 🤍🤍",
@@ -114,7 +117,7 @@ export async function getStaticProps() {
           id:2,
           owner: {
             img: "/images/posts/vee.jpg",
-            name: "Vee Kativhu, ed.m",
+            name: "Bee Mativhu, ed.m",
             following: false,
             title:
               "Young Leader at the UN | Girls'Education Activist | Harvard MA | Founder of Empowered By Vee | Oxford BA Grad",
@@ -122,7 +125,7 @@ export async function getStaticProps() {
           },
           referrer: {
             img: "/images/posts/ruth.jpg",
-            name: "Ruth Baniga",
+            name: "Ruth Bazinga",
             desc: "likes this"
           },
           postContent: `Allow me to re-introduce myself, 👩🏾‍🦱 hi! my name is Varaidzo Felistus Kativhu - but everyone calls me Vee
