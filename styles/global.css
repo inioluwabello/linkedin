@@ -56,6 +56,7 @@ img {
   color: #424B57
 }
 
+.alt-color>div>a,
 .alt-color {
   color: #78808a;
 }
@@ -93,6 +94,11 @@ img {
 .space-between {
   display: flex;
   justify-content: space-between;
+}
+
+.space-around {
+  display: flex;
+  justify-content: space-around;
 }
 
 .flex-end {
@@ -685,4 +691,19 @@ button.order>svg {
 }
 .emphasis {
   color: brown;
+}
+.links {
+  padding: .5rem;
+}
+.links>div{
+  margin-top: .3rem
+}
+.links>div>a{
+  padding: .1rem .5rem;
+  display: inline-block;
+}
+.links>div>a>svg,
+.links>div>span>svg{
+  position: relative;
+  top: -1.5px;
 }

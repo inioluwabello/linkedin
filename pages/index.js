@@ -6,6 +6,7 @@ import MyPages from "../components/home/MyPages";
 import Posts from "../components/home/Posts";
 import Suggestions from "../components/home/Suggestions";
 import PremiumAd from "../components/home/PremiumAd";
+import LinkedInLinks from "../components/home/LinkedInLinks"
 import user from "../data/user";
 import Disclaimer from "../components/utils/Disclaimer";
 
@@ -27,6 +28,7 @@ const Index = ({ posts }) => {
           <div className="col-xs-12 d-sm-none d-md-none d-lg-block col-lg-3">
             <Suggestions />
             <PremiumAd user={user} />
+            <LinkedInLinks />
           </div>
         </div>
         
