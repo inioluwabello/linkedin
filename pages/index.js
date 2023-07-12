@@ -31,6 +31,9 @@ const Index = ({ posts }) => {
             <LinkedInLinks />
           </div>
         </div>
+        <div>
+          <img src="/images/screenshot.jpg" alt="" />
+        </div>
         
         <Disclaimer />
       </LinkedInLayout>
