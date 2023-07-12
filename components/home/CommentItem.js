@@ -1,7 +1,7 @@
 const CommentItem = ({ comment }) => {
   const titleLimiterCount = 70;
   return (
-    <div className="new-comment mt-2">
+    <div key={comment.id} className="new-comment mt-2">
       <div className="fl comment-profile-details">
         <img src={comment.profileImg} alt="User Profile Image" />
         <div className="flex-grow-1">
@@ -28,7 +28,7 @@ const CommentItem = ({ comment }) => {
 
           {comment.replies &&
             comment.replies.map((reply) => {
-              return <CommentItem comment={reply} />;
+              return <CommentItem key={comment.id} comment={reply} />;
             })}
         </div>
       </div>

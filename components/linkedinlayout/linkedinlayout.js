@@ -14,11 +14,8 @@ const LinkedInLayout = ({ children, user }) => {
     setPageWidth(width);
   };
 
-  setTimeout(() => {
-    handleWindowSizeChange();
-  }, 1000);
-
   useEffect(() => {
+    handleWindowSizeChange();
     window.addEventListener("resize", handleWindowSizeChange);
 
     return () => {

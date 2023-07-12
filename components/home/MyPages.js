@@ -11,8 +11,7 @@ const MyPages = () => {
 
         {pages.map((page, i) => {
           return (
-            <>
-              <div className="fl">
+              <div key={i} className="fl">
                 <div className="page-img">
                   <img src={page.logo} />
                 </div>
@@ -27,7 +26,6 @@ const MyPages = () => {
                   </Link>
                 </div>
               </div>
-            </>
           );
         })}
       </div>
